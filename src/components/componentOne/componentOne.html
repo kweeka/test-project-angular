@@ -1,0 +1,31 @@
+<h1>User list</h1>
+<text-filter text="$ctrl.filter" label="'Filter name'"></text-filter>
+<table border="1">
+    <tr>
+        <td>№</td>
+        <td>Id</td>
+        <td>User age
+            <a ng-click="$ctrl.predicate = 'age'; $ctrl.reverse=true">^</a>
+            <a ng-click="$ctrl.predicate = 'age'; $ctrl.reverse=false">v</a></td>
+        <td>Full name
+            <a ng-click="$ctrl.predicate = 'name'; $ctrl.reverse=true">^</a>
+            <a ng-click="$ctrl.predicate = 'name'; $ctrl.reverse=false">v</a></td>
+        <td>User info</td>
+        <td>Show user</td>
+        <td>Checked user</td>
+    </tr>
+    <tr ng-repeat="user in $ctrl.users | filterService:$ctrl.predicate:$ctrl.reverse | filter:$ctrl.filter track by user.id">
+        <td>{{$index +1}}</td>
+        <td>{{user.id}}</td>
+        <td>{{user.age}}</td>
+        <td ui-sref="user({userId: user.id})">{{user.name}} {{user.surname}}</td>
+        <td><a href="/user/{{user.id}}">Info</a></td>
+        <td ng-click="user.getUserInfo()">Show user</td>
+        <td><input type="checkbox" ng-model="user.checked"/></td>
+    </tr>
+</table>
+<p>Predicate: {{$ctrl.predicate}} Reverse: {{$ctrl.reverse}}</p>
+<p><input type="button" value="Delete" ng-click="$ctrl.delete_user()"/></p>
+Delete_even: <input type="radio" ng-model="$ctrl.delete_selector" value="even"/></br>
+Delete_odd: <input type="radio" ng-model="$ctrl.delete_selector" value="odd"/></br>
+Delete_all: <input type="radio" ng-model="$ctrl.delete_selector" value="all"/></br>

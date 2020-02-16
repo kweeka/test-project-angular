@@ -1,0 +1,10 @@
+<p>Add new user</p>
+<input type="text" placeholder="Name" ng-model="$ctrl.name" ng-change="$ctrl.clear_error_field('name')"/></br>
+<p ng-show="$ctrl.error_name">{{$ctrl.error_name}}</p>
+<input type="text" placeholder="Surname" ng-model="$ctrl.surname" ng-change="$ctrl.clear_error_field('surname')"/></br>
+<p ng-show="$ctrl.error_surname">{{$ctrl.error_surname}}</p>
+<input type="text" placeholder="Age" ng-model="$ctrl.age" ng-change="$ctrl.clear_error_field('age')"/></br>
+<p ng-show="$ctrl.error_age">{{$ctrl.error_age}}</p>
+<input type="text" placeholder="Phone" ng-model="$ctrl.phone" ng-change="$ctrl.clear_error_field('phone')"/></br>
+<p ng-show="$ctrl.error_phone">{{$ctrl.error_phone}}</p>
+<input type="button" value="Add" ng-click="$ctrl.addNewUser()"/></br>

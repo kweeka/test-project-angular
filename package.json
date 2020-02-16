@@ -1,0 +1,25 @@
+{
+  "name": "project5",
+  "version": "1.0.0",
+  "description": "my first project",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node ./node_modules/gulp/bin/gulp.js project:build",
+    "watch": "node ./node_modules/gulp/bin/gulp.js project:watch",
+    "develop": "node ./node_modules/gulp/bin/gulp.js project:develop"
+  },
+  "author": "vika",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.7.9"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-angular-embed-templates": "^2.3.0",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-inject": "^5.0.5",
+    "gulp-uglify": "^3.0.2"
+  }
+}
