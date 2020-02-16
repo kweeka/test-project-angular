@@ -27,6 +27,11 @@
                     }
                 }
             });
+            $stateProvider.state({
+                name: "map",
+                url: "/map",
+                component: "componentMap"
+            });
             $urlRouterProvider.otherwise("/");
         });
 })();
