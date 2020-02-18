@@ -1,5 +1,5 @@
 (function () {
-    angular.module("mainApp", ["ui.router", "userModule", "filterModule"])
+    angular.module("mainApp", ["ui.router", "userModule", "filterModule", "apiModule"])
         .config(function ($stateProvider, $locationProvider, $urlRouterProvider) {
             $locationProvider.html5Mode(true);
             $stateProvider.state({
@@ -31,6 +31,11 @@
                 name: "map",
                 url: "/map",
                 component: "componentMap"
+            });
+            $stateProvider.state({
+                name: "auth",
+                url: "/auth",
+                component: "componentAuth"
             });
             $urlRouterProvider.otherwise("/");
         });
