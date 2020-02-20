@@ -37,6 +37,16 @@
                 url: "/auth",
                 component: "componentAuth"
             });
+            $stateProvider.state({
+                name: "registration",
+                url: "/registration",
+                component: "componentRegistration"
+            });
+            $stateProvider.state({
+                name: "user_info",
+                url: "/",
+                component: "componentUserInfo"
+            });
             $urlRouterProvider.otherwise("/");
         });
 })();
