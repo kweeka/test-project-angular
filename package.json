@@ -12,7 +12,7 @@
   "author": "vika",
   "license": "ISC",
   "dependencies": {
-    "angular": "^1.7.9"
+    "angular": "^1.8.3"
   },
   "devDependencies": {
     "browser-sync": "^2.26.7",
